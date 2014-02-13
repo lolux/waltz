@@ -8,7 +8,8 @@
             	"rack.session",
             	"dashboard_session_nonce",
             	"_my-heroku_session",
-            	"user_session_secret"]
+            	"user_session_secret"
+            ]
         },
         "login": {
             "urls": [
