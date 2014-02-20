@@ -1,0 +1,17 @@
+{
+    "*://*.mint.com/*": {
+        "name": "Mint",
+        "logout": {
+            "cookies": ["JSESSIONID", "wa_login"]
+        },
+        "login": {
+            "urls": [],
+            "formURL": "https://wwws.mint.com/loginUserSubmit.xevent",
+            "method": "POST",
+            "usernameField": "email",
+            "passwordField": "password",
+            "hasHiddenInputs": true,
+            "check": "li#hdr-username"
+        }
+    }
+}
