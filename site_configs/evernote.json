@@ -1,0 +1,29 @@
+{
+    "*://*.evernote.com/*": {
+        "name": "Evernote",
+        "logout": {
+            "cookies": ["auth"]
+        },
+        "login": {
+            "urls": [
+            	"https://www.evernote.com/Home.action",
+            	"https://www.evernote.com/Login.action",
+            	"https://www.evernote.com/Login.action?targetUrl=%2FHome.action"
+            ],
+            "formURL": "https://www.evernote.com/Login.action",
+            "method": "POST",
+            "usernameField": "username",
+            "passwordField": "password",
+            "submitButton": "input#login",
+            "hasHiddenInputs": true,
+            "formOnly": true,
+            "check": "a.logout, a:contains('Log out'), a.first.gear-dropdown-user",
+            "twoFactor": [
+                {
+                    "url": "https://www.evernote.com/OTCAuth.action",
+                    "check": "input#otc-code"
+                }
+            ]
+        }
+    }
+}
