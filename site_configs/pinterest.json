@@ -13,7 +13,6 @@
             "method": "POST",
             "usernameField": "username_or_email",
             "passwordField": "password",
-            "submitButton": "button:contains('Log In')",
             "check": ".profileName, .myBoards, a:contains('Log Out')"
         }
     }
