@@ -1,51 +1,20 @@
 {
-    "*://*.google.com/*": {
-        "name": "Google",
+    "*://*.pinterest.com/*": {
+        "name": "Pinterest",
         "logout": {
-            "cookies": ["SID", "GX"]
+            "cookies": ["_pinterest_sess", "_b"]
         },
         "login": {
             "urls": [
-                "https://accounts.google.com/ServiceLoginAuth",
-                "https://accounts.google.com/ServiceLogin"
+                "http://www.pinterest.com/",
+                "https://www.pinterest.com/login/"
             ],
-            "formURL": "https://accounts.google.com/ServiceLoginAuth",
-            "formOnly": true,
+            "formURL": "https://www.pinterest.com/login/",
             "method": "POST",
-            "usernameField": "Email",
-            "passwordField": "Passwd",
-            "hasHiddenInputs": true,
-            "check": "a#gb_71",
-            "twoFactor": [
-                {
-                    "url": "https://accounts.google.com/SecondFactor",
-                    "check": "form[action='SecondFactor']"
-                }
-            ]
-        }
-    },
-    "*://*.youtube.com/*": {
-        "name": "YouTube",
-        "logout": {
-            "cookies": ["SID", "GX"]
-        },
-        "login": {
-            "urls": [
-                "https://accounts.google.com/ServiceLoginAuth",
-                "https://accounts.google.com/ServiceLogin"
-            ],
-            "formURL": "https://accounts.google.com/ServiceLoginAuth",
-            "method": "POST",
-            "usernameField": "Email",
-            "passwordField": "Passwd",
-            "hasHiddenInputs": true,
-            "check": "div#yt-masthead-user",
-            "twoFactor": [
-                {
-                    "url": "https://accounts.google.com/SecondFactor",
-                    "check": "form[action='SecondFactor']"
-                }
-            ]
+            "usernameField": "username_or_email",
+            "passwordField": "password",
+            "submitButton": "button:contains('Log In')",
+            "check": ".profileName, .myBoards, a:contains('Log Out')"
         }
     }
 }
